@@ -1,0 +1,21 @@
+#+TITLE: esbulid-react
+#+AUTHOR: Adam Schwartz
+#+DATE: September 10, 2021
+#+OPTIONS: ':true *:true toc:nil num:nil ^:nil
+
+A minimal react project with esbulid.
+
+Dev server:
+#+begin_src text
+npm run serve
+#+end_src
+
+Build app:
+#+begin_src text
+npm run build
+#+end_src
+
+Lint + format:
+#+begin_src text
+npm run lint
+#+end_src

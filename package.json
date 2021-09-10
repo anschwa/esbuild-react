@@ -1,0 +1,55 @@
+{
+  "name": "esbulid-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "esbuild": "^0.12.25",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "rules": {
+      "jsx-a11y/label-has-associated-control": [
+        "off"
+      ],
+      "jsx-a11y/no-onchange": [
+        "off"
+      ],
+      "no-constant-condition": [
+        "off"
+      ],
+      "max-len": [
+        "off"
+      ]
+    }
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "scripts": {
+    "serve": "esbuild src/app.jsx --serve --servedir=public --bundle --outfile=public/bundle.js",
+    "build": "esbuild src/app.jsx --bundle --minify --sourcemap --outfile=public/bundle.js",
+    "lint": "eslint './src/**/*.{js,jsx}' --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
